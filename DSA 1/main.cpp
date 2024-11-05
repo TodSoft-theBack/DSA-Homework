@@ -1,13 +1,21 @@
-#include<iostream>
-#include<vector>
-#include "utils.hpp"
-#include "mergeIntervals.h"
+#include <iostream>
+#include <vector>
+#include "../utils.hpp"
+#include "football.h"
+
 
 
 int main()
 {
-    std::vector<std::vector<int>> intervals = {{4,6}, {8,9}, {6,7}, {1,4}};
-    auto merged = merge(intervals);
-    PrintArray(merged);
+    size_t N;
+    std::cin >> N;
+
+    char* symbols = new char[N];
+
+    for (size_t i = 0; i < N; i++)
+        std::cin >> symbols[i];
+    
+    CountSortNConvert(symbols, N);
+
     return 0;
 }
